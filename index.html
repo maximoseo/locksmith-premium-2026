@@ -94,7 +94,12 @@
         /* Hero */
         .hero {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.92) 100%),
-                        url('images/hero-emergency.jpg') center/cover no-repeat;
+                        url('images/hero-emergency.webp') center/cover no-repeat;
+            background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.92) 100%),
+                              image-set(
+                                url('images/hero-emergency.webp') type('image/webp'),
+                                url('images/hero-emergency.jpg') type('image/jpeg')
+                              );
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -356,7 +361,12 @@
         /* Trust */
         .trust {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%),
-                        url('images/team-trust.jpg') center/cover no-repeat;
+                        url('images/team-trust.webp') center/cover no-repeat;
+            background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%),
+                              image-set(
+                                url('images/team-trust.webp') type('image/webp'),
+                                url('images/team-trust.jpg') type('image/jpeg')
+                              );
             color: var(--white);
             position: relative;
         }
@@ -1009,10 +1019,17 @@
 
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="images/residential-service.jpg" alt="Residential Locksmith Services" class="service-card-image">
+                    <picture>
+                        <source srcset="images/residential-service.webp" type="image/webp">
+                        <img src="images/residential-service.jpg" alt="Residential Locksmith Services" class="service-card-image" loading="lazy">
+                    </picture>
                     <div class="service-card-content">
                     <h3>Residential Services</h3>
-                    <p>Protecting San Antonio homes with comprehensive residential locksmith solutions. Whether you're locked out at 3 AM or upgrading to the latest smart lock technology, our certified technicians provide fast, reliable service with a smile. We specialize in high-security deadbolts, keyless entry systems, and complete home security assessments.</p>
+                    <p>Protecting San Antonio homes with comprehensive residential locksmith solutions since 2010. Our residential locksmith services cover everything from emergency lockouts to complete home security upgrades. Whether you've been locked out at 3 AM, need to rekey your locks after moving into a new home, or want to upgrade to the latest smart lock technology, our state-licensed and insured technicians provide fast, reliable, and courteous service every time.</p>
+
+                    <p>We understand that your home is your most valuable asset, which is why we only install and service high-quality, proven lock brands including Schlage, Kwikset, Yale, Medeco, and August smart locks. Our technicians undergo continuous training on the latest residential security technologies, from traditional deadbolts to advanced biometric and smartphone-controlled entry systems. Every residential service includes a complimentary security assessment to identify potential vulnerabilities in your home's access points.</p>
+
+                    <p>Our emergency lockout service operates 24/7/365 with an average response time under 30 minutes across all San Antonio neighborhoods. We use non-destructive entry techniques whenever possible to preserve your existing locks and door hardware, saving you money on unnecessary replacements. For homes requiring rekeying services—whether after a lost key, break-in, or tenant turnover—we can rekey multiple locks to work with a single key for your convenience. We also offer master key systems for larger homes, providing different access levels for family members, housekeepers, or property managers while maintaining your complete control.</p>
                     <ul>
                         <li>24/7 Emergency Home Lockout Service</li>
                         <li>High-Security Lock Installation & Repair</li>
@@ -1027,10 +1044,17 @@
                 </div>
 
                 <div class="service-card">
-                    <img src="images/commercial-service.jpg" alt="Commercial Locksmith Services" class="service-card-image">
+                    <picture>
+                        <source srcset="images/commercial-service.webp" type="image/webp">
+                        <img src="images/commercial-service.jpg" alt="Commercial Locksmith Services" class="service-card-image" loading="lazy">
+                    </picture>
                     <div class="service-card-content">
                     <h3>Commercial Services</h3>
-                    <p>Securing San Antonio businesses with enterprise-grade commercial locksmith solutions. From retail stores to office buildings and industrial facilities, we provide customized security systems that protect your assets, employees, and customers. Our commercial specialists are available 24/7 to minimize downtime and keep your business secure.</p>
+                    <p>Securing San Antonio businesses with enterprise-grade commercial locksmith solutions tailored to your industry and security requirements. From small retail shops to large corporate campuses, manufacturing facilities, healthcare centers, educational institutions, and government buildings, we design and implement comprehensive security systems that protect your assets, employees, customers, and sensitive information. Our commercial division serves over 500 San Antonio businesses and maintains 24/7 emergency availability to minimize costly downtime and ensure business continuity.</p>
+
+                    <p>We specialize in advanced access control systems that go far beyond traditional lock and key. Our installed systems include electronic keypad entry, proximity card readers, biometric scanners, mobile credential access via smartphone, and cloud-managed access platforms that provide real-time monitoring and detailed audit trails. These systems allow you to grant, restrict, or revoke access instantly without the cost and security risks of traditional key replacement. Master key systems and grand master key hierarchies provide flexible access levels across departments, floors, or entire building complexes while maintaining centralized administrative control.</p>
+
+                    <p>Our commercial clients benefit from ongoing maintenance programs that include regular lock inspections, lubrication, adjustment, and preemptive replacement of worn components before failures occur. We work with all major commercial hardware brands including Von Duprin, Schlage commercial grade, Assa Abloy, Corbin Russwin, and Mul-T-Lock restricted keyway systems. For regulated industries, we ensure full compliance with fire codes, ADA requirements, OSHA standards, and industry-specific security mandates. Emergency services include lockout response, panic bar repairs, door closer adjustments, and after-hours lock changes following security incidents.</p>
                     <ul>
                         <li>Advanced Access Control & Card Reader Systems</li>
                         <li>Master Key & Grand Master Key Systems</li>
@@ -1045,10 +1069,17 @@
                 </div>
 
                 <div class="service-card">
-                    <img src="images/automotive-service.jpg" alt="Automotive Locksmith Services" class="service-card-image">
+                    <picture>
+                        <source srcset="images/automotive-service.webp" type="image/webp">
+                        <img src="images/automotive-service.jpg" alt="Automotive Locksmith Services" class="service-card-image" loading="lazy">
+                    </picture>
                     <div class="service-card-content">
                     <h3>Automotive Services</h3>
-                    <p>Expert automotive locksmith services for San Antonio drivers. Lost your keys? Locked out of your car? Our mobile units arrive quickly with state-of-the-art key cutting and programming equipment. We service all major makes and models, from classic vehicles to the latest smart key systems, and we come to you anywhere in the San Antonio area.</p>
+                    <p>Expert mobile automotive locksmith services for San Antonio drivers, available 24/7 across Bexar County and surrounding areas. Our fully-equipped mobile service vehicles function as complete automotive locksmith shops on wheels, arriving at your location with advanced key cutting machines, transponder programming equipment, and diagnostic tools for all vehicle makes and models. Whether you've locked your keys in the car, lost your only key, need a spare programmed, or are dealing with a malfunctioning ignition, our automotive specialists provide fast, professional service at your home, office, or roadside location.</p>
+
+                    <p>Modern vehicles have increasingly complex electronic security systems, and we maintain cutting-edge technology to service them all. Our services include transponder key programming for chip keys, smart key and proximity key fob programming, remote starter installation and programming, key extraction from broken ignitions or locks, and full ignition cylinder replacement when necessary. We work with all major automotive brands including Toyota, Honda, Ford, Chevrolet, Nissan, BMW, Mercedes-Benz, Audi, Volkswagen, Hyundai, Kia, Jeep, Dodge, Ram, and luxury brands. Our technicians receive manufacturer-specific training and maintain updated software for the latest vehicle security protocols.</p>
+
+                    <p>Emergency automotive lockout service is our most requested service, and we pride ourselves on rapid response times—typically 20-30 minutes in the San Antonio metro area. We use professional lockout tools that prevent damage to your vehicle's paint, trim, and door seals, unlike improvised methods that can cause costly damage. For lost key situations, we can originate new keys onsite using your VIN number and vehicle database access, eliminating expensive dealership visits that often require towing and multi-day waits. All automotive services include a 90-day workmanship warranty and satisfaction guarantee, ensuring your complete peace of mind.</p>
                     <ul>
                         <li>Fast Emergency Car Lockout Service</li>
                         <li>Transponder Key Programming & Replacement</li>
@@ -1243,6 +1274,51 @@
                     <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">Can you make car keys with transponder chips?</h3>
                     <p style="color: var(--gray); line-height: 1.8;">Yes, we program transponder keys, smart keys, key fobs, and proximity keys for all major vehicle makes and models. Our mobile units carry advanced key programming equipment to cut and program keys on-site. We can create new keys even if you've lost all existing keys, and our prices are typically 30-50% less than dealership rates with same-day service.</p>
                 </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">What payment methods do you accept?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">We accept all major credit cards (Visa, MasterCard, American Express, Discover), debit cards, cash, Venmo, Zelle, and CashApp. For commercial clients, we also offer invoicing with net-30 payment terms for established accounts. Payment is due upon completion of service.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">How long does it take to rekey a house?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">Rekeying a standard residential lock takes approximately 10-15 minutes per lock. For an average home with 5-6 exterior locks, the complete rekeying service typically takes 60-90 minutes. We can rekey multiple locks to work with a single key for your convenience, making it easy to secure your entire home with one master key.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">Do you offer senior or military discounts?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">Yes! We proudly offer a 10% discount for active military, veterans, first responders, and seniors aged 65 and older on all non-emergency services. Please mention your eligibility when scheduling your appointment. Valid ID or proof of service is required at the time of service.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">Can you install smart locks with my existing deadbolt?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">Most smart locks are designed to replace your existing deadbolt completely. However, some models like the August Smart Lock can be installed over your existing deadbolt interior mechanism. During our free security consultation, we'll assess your current hardware and recommend the best smart lock solution that fits your door configuration, security needs, and budget.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">What should I do if I'm locked out at night?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">Call us immediately at (210) 619-3986. Our 24/7 emergency lockout service operates around the clock with no extra after-hours fees. Stay in a safe, well-lit area if possible. Our technician will arrive within 20-30 minutes on average and can unlock your door using non-destructive entry techniques. We'll also provide recommendations to prevent future lockouts.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">How often should I replace my locks?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">High-quality residential locks should be replaced every 7-10 years under normal use, or sooner if you notice difficulty turning the key, loose components, or visible wear. However, you should rekey or replace locks immediately after moving into a new home, losing keys, ending a relationship, or experiencing a break-in. Annual lock maintenance and lubrication can significantly extend lock lifespan.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">What brands of locks do you install and service?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">We install and service all major residential and commercial lock brands including Schlage, Kwikset, Yale, Medeco, Mul-T-Lock, Assa Abloy, August Smart Locks, Baldwin, Emtek, Von Duprin, Corbin Russwin, and more. We only recommend and install Grade 1 (highest security) and Grade 2 locks for our clients, avoiding lower-quality hardware that compromises your security.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">Can you extract a broken key from my lock?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">Yes, broken key extraction is one of our specialty services. Our technicians use professional extraction tools to carefully remove broken key fragments without damaging the lock cylinder. In most cases, we can extract the broken piece and cut a new key on-site so you can use the lock immediately. If the lock was damaged by the break, we can repair or replace it the same day.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; font-family: 'acumin-pro', sans-serif;">Do you provide commercial access control systems?</h3>
+                    <p style="color: var(--gray); line-height: 1.8;">Absolutely. We design, install, and maintain comprehensive commercial access control systems including electronic keypads, proximity card readers, biometric scanners, mobile credential access, and cloud-managed platforms. These systems provide detailed audit trails, remote access management, scheduled access control, and integration with your existing security cameras and alarm systems. We serve businesses of all sizes from single-door offices to multi-building corporate campuses.</p>
+                </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
@@ -1294,7 +1370,7 @@
 
     <!-- Emergency CTA Banner -->
     <section style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); padding: 4rem 2rem; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('images/team-trust.jpg') center/cover; opacity: 0.15;"></div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('images/team-trust.webp') center/cover; opacity: 0.15;"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <div style="max-width: 800px; margin: 0 auto; text-align: center; color: white;">
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Locked Out? We're Here to Help!</h2>
@@ -1374,7 +1450,7 @@
       "@type": "LocalBusiness",
       "@id": "https://maximoseo.github.io/locksmith-premium-2026/",
       "name": "Elite Locksmith San Antonio",
-      "image": "https://maximoseo.github.io/locksmith-premium-2026/images/team-trust.jpg",
+      "image": "https://maximoseo.github.io/locksmith-premium-2026/images/team-trust.webp",
       "telephone": "+1-210-619-3986",
       "address": {
         "@type": "PostalAddress",
