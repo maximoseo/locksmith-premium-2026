@@ -1,1 +1,10 @@
 index.html.backup
+
+# AI Optimization Tools
+.ai-tools-venv/
+tools/cache/
+tools/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python

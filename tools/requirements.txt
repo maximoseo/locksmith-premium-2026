@@ -1,0 +1,19 @@
+# AI Optimization Tools Requirements
+# Install with: pip install -r requirements.txt
+
+# Core AI SDKs
+anthropic>=0.117.0
+openai>=2.46.0
+
+# Optimization Tools
+llmlingua>=0.2.2
+gptcache>=0.1.44
+
+# Dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Optional: For advanced features
+numpy>=1.24.0
+faiss-cpu>=1.7.4  # For semantic similarity in cache
+sentence-transformers>=2.2.0  # For embeddings
