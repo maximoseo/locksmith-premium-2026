@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Elite Locksmith San Antonio | 24/7 Emergency Service - Professional Lock Solutions</title>
+<meta name="description" content="San Antonio's #1 rated locksmith service - 24/7 emergency response, 30-min arrival, licensed & insured. Residential, commercial & automotive lock solutions. Call (210) 619-3986">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,500..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   ELITE LOCKSMITH SAN ANTONIO — redesign 2026
+   Concept: night / day split.
+   Night (ink + brass)  = emergency moments  → hero, emergency band, footer
+   Day  (steel daylight) = research moments  → services, reviews, areas, FAQ
+   Signature: key-bitting profile used as the divider between the two.
+   Type: Big Shoulders (industrial display) · Spline Sans (body)
+         Spline Sans Mono (stamped "key-tag" labels)
+   ============================================================ */
+
+:root{
+  --ink:      #0F1922;
+  --ink-2:    #16232E;
+  --ink-3:    #1E2F3C;
+  --line-ink: #2B3D4A;
+
+  --brass:      #D8A23F;
+  --brass-hi:   #F1C566;
+  --brass-deep: #93701F;
+
+  --day:   #EEF1F2;
+  --card:  #FFFFFF;
+  --text:  #152029;
+  --muted: #55656F;
+  --line:  #DBE0E3;
+
+  --disp: "Big Shoulders","Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body: "Spline Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono: "Spline Sans Mono","SFMono-Regular",Consolas,monospace;
+
+  --maxw: 1180px;
+  --r: 14px;
+  --shadow: 0 10px 30px rgba(15,25,34,.10);
+  --shadow-sm: 0 4px 14px rgba(15,25,34,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+body{
+  font-family:var(--body);
+  font-size:1rem;
+  line-height:1.65;
+  color:var(--text);
+  background:var(--day);
+  overflow-x:hidden;
+}
+
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px;border-radius:4px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{scroll-margin-top:96px}
+
+/* ---------- shared type ---------- */
+h1,h2,h3,.disp{
+  font-family:var(--disp);
+  font-weight:700;
+  line-height:.98;
+  letter-spacing:.01em;
+  text-transform:uppercase;
+}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--text)}
+h3{font-size:1.45rem;letter-spacing:.02em}
+
+.tag{
+  font-family:var(--mono);
+  font-weight:600;
+  font-size:.72rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.tag--day{color:var(--brass-deep)}
+.tag--night{color:var(--brass)}
+
+.sec-head{max-width:720px;margin:0 auto 2.6rem;text-align:center}
+.sec-head .tag{display:block;margin-bottom:.9rem}
+.sec-head p{color:var(--muted);margin-top:.9rem;font-size:1.05rem}
+
+/* mini bitting rule under headings */
+.bit-rule{display:block;margin:1rem auto 0;width:130px;height:12px;color:var(--line)}
+.sec-head--left{max-width:none;text-align:left;margin-left:0}
+.sec-head--left .bit-rule{margin-left:0}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-family:var(--disp);font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;font-size:1.05rem;line-height:1;
+  padding:1.05rem 1.7rem;border-radius:10px;text-decoration:none;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  white-space:nowrap;max-width:100%;
+}
+@media(max-width:600px){
+  .btn{white-space:normal;line-height:1.2;text-align:center}
+  .rev-cta .btn,.areas-cta .btn,.faq-cta .btn{width:100%}
+}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+.btn--brass{background:var(--brass);color:var(--ink);box-shadow:0 6px 20px rgba(216,162,63,.35)}
+.btn--brass:hover{background:var(--brass-hi);transform:translateY(-2px);box-shadow:0 10px 26px rgba(216,162,63,.45)}
+.btn--ghost{border:1.5px solid var(--line-ink);color:#E8EDF1;background:transparent}
+.btn--ghost:hover{border-color:var(--brass);color:var(--brass);transform:translateY(-2px)}
+.btn--ink{background:var(--ink);color:#fff}
+.btn--ink:hover{background:var(--ink-3);transform:translateY(-2px)}
+.btn--lg{font-size:1.2rem;padding:1.2rem 2.1rem}
+
+/* ---------- key-tag chips (stamped metal tags) ---------- */
+.keytag{
+  position:relative;
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:var(--mono);font-weight:600;font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.62rem .95rem .62rem 1.7rem;
+  border:1px solid var(--line-ink);border-radius:999px;
+  color:#C8D2DA;background:rgba(255,255,255,.03);
+}
+.keytag::before{ /* the punched hole of a key tag */
+  content:"";position:absolute;left:.7rem;top:50%;
+  width:.5rem;height:.5rem;transform:translateY(-50%);
+  border:1.5px solid var(--brass);border-radius:50%;
+}
+.keytag b{color:var(--brass);font-weight:600}
+.keytag--day{border-color:var(--line);color:var(--muted);background:#fff}
+.keytag--day::before{border-color:var(--brass-deep)}
+.keytag--day b{color:var(--brass-deep)}
+
+/* ============================================================
+   TOP BAR + HEADER
+   ============================================================ */
+.topbar{background:var(--ink-2);border-bottom:1px solid var(--line-ink)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.45rem;padding-bottom:.45rem}
+.topbar span{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#93A3AF}
+.topbar b{color:var(--brass);font-weight:600}
+.topbar a{text-decoration:none}
+@media(max-width:700px){.topbar .hide-s{display:none}}
+
+header.site{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(15,25,34,.92);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-ink);
+}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-top:.85rem;padding-bottom:.85rem}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff}
+.logo svg{width:34px;height:34px;color:var(--brass);flex:none}
+.logo .l1{font-family:var(--disp);font-weight:800;font-size:1.35rem;letter-spacing:.05em;text-transform:uppercase;line-height:1}
+.logo .l2{display:block;font-family:var(--mono);font-weight:500;font-size:.58rem;letter-spacing:.3em;color:#8FA0AC;text-transform:uppercase;margin-top:.2rem}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#B9C6CF;text-decoration:none;transition:color .15s}
+.nav-links a:hover{color:var(--brass)}
+.header-cta{font-size:.95rem;padding:.85rem 1.3rem}
+@media(max-width:940px){.nav-links{display:none}}
+@media(max-width:520px){.header-cta span{display:none}}
+
+/* ============================================================
+   HERO (night)
+   ============================================================ */
+.hero{
+  position:relative;background:var(--ink);color:#E9EEF2;overflow:hidden;
+}
+.hero::before{ /* porch-light glow */
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 78% 12%, rgba(216,162,63,.16), transparent 62%),
+    radial-gradient(700px 480px at 8% 90%, rgba(216,162,63,.06), transparent 60%);
+}
+.hero .wrap{position:relative;padding-top:clamp(3.4rem,7vw,5.5rem);padding-bottom:clamp(3rem,6vw,4.5rem)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr}}
+
+.hero .tag{display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.3rem}
+.hero .tag i{width:26px;height:1px;background:var(--brass);display:inline-block}
+
+.hero h1{color:#fff;font-size:clamp(3.1rem,8.5vw,6.4rem);font-weight:800}
+.hero h1 .sub{
+  display:block;font-size:clamp(1.15rem,2.6vw,1.85rem);
+  font-weight:600;letter-spacing:.05em;color:var(--brass);margin-top:.55rem;
+}
+.hero-lead{margin:1.3rem 0 1.8rem;max-width:560px;color:#B9C6CF;font-size:1.08rem}
+
+.hero-phone{
+  display:inline-block;text-decoration:none;line-height:.95;
+  font-family:var(--disp);font-weight:800;text-transform:uppercase;
+  font-size:clamp(2.5rem,6.5vw,4.6rem);letter-spacing:.01em;
+  color:var(--brass);margin-bottom:.4rem;
+  transition:color .15s;
+}
+.hero-phone:hover{color:var(--brass-hi)}
+.hero-phone small{
+  display:block;font-family:var(--mono);font-weight:600;font-size:.7rem;
+  letter-spacing:.26em;color:#8FA0AC;margin-bottom:.5rem;
+}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin:1.4rem 0 2rem}
+.hero-tags{display:flex;flex-wrap:wrap;gap:.6rem}
+
+/* dispatch card */
+.dispatch{
+  position:relative;background:var(--ink-2);border:1px solid var(--line-ink);
+  border-radius:var(--r);padding:1.7rem 1.6rem 1.5rem;box-shadow:var(--shadow);
+}
+.dispatch::before{
+  content:"DISPATCH STATUS";
+  font-family:var(--mono);font-weight:600;font-size:.62rem;letter-spacing:.28em;
+  color:#7E909C;display:block;margin-bottom:1.1rem;
+}
+.dispatch ul{list-style:none;display:grid;gap:1rem}
+.dispatch li{display:flex;gap:.9rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px dashed var(--line-ink)}
+.dispatch li:last-child{border-bottom:0;padding-bottom:0}
+.dispatch .num{
+  font-family:var(--disp);font-weight:800;font-size:2rem;line-height:1;
+  color:#fff;min-width:86px;
+}
+.dispatch .num b{color:var(--brass);font-weight:800}
+.dispatch .lbl{font-family:var(--mono);font-weight:500;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#8FA0AC;padding-top:.35rem}
+.dispatch .live{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.2rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#9FE3B0}
+.dispatch .dot{width:.55rem;height:.55rem;border-radius:50%;background:#3ECF6A;box-shadow:0 0 0 0 rgba(62,207,106,.5);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(62,207,106,0)}100%{box-shadow:0 0 0 0 rgba(62,207,106,0)}}
+</style>
+</head>
+<body>
+
+<!-- ⚠️ זהו קובץ REDESIGN 2026 - לא הושלם -->
+<!-- הקובץ הועלה חלקית - חסרים sections רבים -->
+
+<div class="topbar">
+  <div class="wrap">
+    <span><b>24/7</b> EMERGENCY</span>
+    <span class="hide-s"><b>LICENSED</b> &amp; INSURED</span>
+    <span><b>210</b>-619-3986</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Elite Locksmith San Antonio - Home">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+      <div>
+        <div class="l1">ELITE</div>
+        <div class="l2">LOCKSMITH SA</div>
+      </div>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#why">WHY US</a></li>
+        <li><a href="#reviews">REVIEWS</a></li>
+        <li><a href="#areas">AREAS</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+12106193986" class="btn btn--brass header-cta">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span>CALL NOW</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="tag tag--night">
+          <i></i> EMERGENCY LOCKSMITH
+        </div>
+        <h1>
+          LOCKED OUT?
+          <span class="sub">We're On The Way</span>
+        </h1>
+        <p class="hero-lead">
+          San Antonio's fastest emergency locksmith service. Licensed technicians, mobile units citywide, 30-minute arrival guarantee. One call fixes everything.
+        </p>
+
+        <a href="tel:+12106193986" class="hero-phone">
+          <small>24/7 DISPATCH</small>
+          (210) 619-3986
+        </a>
+
+        <div class="hero-ctas">
+          <a href="#services" class="btn btn--brass btn--lg">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            SEE SERVICES
+          </a>
+          <a href="#why" class="btn btn--ghost btn--lg">WHY CHOOSE US</a>
+        </div>
+
+        <div class="hero-tags">
+          <div class="keytag"><b>14</b> YEARS LOCAL</div>
+          <div class="keytag"><b>689+</b> HAPPY CUSTOMERS</div>
+          <div class="keytag"><b>30-MIN</b> RESPONSE</div>
+        </div>
+      </div>
+
+      <div class="dispatch">
+        <ul>
+          <li>
+            <div class="num"><b>&lt;30</b>MIN</div>
+            <div class="lbl">AVERAGE<br>ARRIVAL TIME</div>
+          </li>
+          <li>
+            <div class="num"><b>24/7</b></div>
+            <div class="lbl">NIGHTS<br>WEEKENDS<br>HOLIDAYS</div>
+          </li>
+          <li>
+            <div class="num"><b>$0</b></div>
+            <div class="lbl">HIDDEN<br>FEES</div>
+          </li>
+        </ul>
+        <div class="live">
+          <span class="dot"></span>
+          UNITS DISPATCHED NOW
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider divider--to-day" aria-hidden="true">
+  <svg class="bitting"><use href="#bit"/></svg>
+</div>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag tag--day">Our Services</span>
+      <h2>Professional Locksmith Solutions</h2>
+      <svg class="bit-rule" aria-hidden="true"><use href="#bit-sm"/></svg>
+      <p>Comprehensive security solutions for every need — residential, commercial, and automotive.</p>
+    </div>
+
+    <div class="svc-grid">
+      <!-- Residential -->
+      <article class="svc rv">
+        <div class="svc-media">
+          <img src="https://maximoseo.github.io/locksmith-premium-2026/images/residential-service.jpg" alt="Residential locksmith installing a deadbolt on a San Antonio home" loading="lazy">
+          <span class="price">From $75</span>
+        </div>
+        <div class="svc-body">
+          <h3>Residential Services</h3>
+          <p>Protecting San Antonio homes with comprehensive residential locksmith solutions since 2010 — from 3 AM emergency lockouts and post-move rekeys to full smart-lock upgrades, handled by state-licensed and insured technicians with fast, courteous service every time.</p>
+          <details>
+            <summary>Read full service details</summary>
+            <p>We understand that your home is your most valuable asset, which is why we only install and service high-quality, proven lock brands including Schlage, Kwikset, Yale, Medeco, and August smart locks. Our technicians undergo continuous training on the latest residential security technologies, from traditional deadbolts to advanced biometric and smartphone-controlled entry systems. Every residential service includes a complimentary security assessment to identify potential vulnerabilities in your home's access points.</p>
+            <p>Our emergency lockout service operates 24/7/365 with an average response time under 30 minutes across all San Antonio neighborhoods. We use non-destructive entry techniques whenever possible to preserve your existing locks and door hardware, saving you money on unnecessary replacements. For homes requiring rekeying services—whether after a lost key, break-in, or tenant turnover—we can rekey multiple locks to work with a single key for your convenience. We also offer master key systems for larger homes, providing different access levels for family members, housekeepers, or property managers while maintaining your complete control.</p>
+          </details>
+          <ul>
+            <li>24/7 Emergency Home Lockout Service</li>
+            <li>High-Security Lock Installation &amp; Repair</li>
+            <li>Professional Rekeying Services</li>
+            <li>Smart Lock &amp; Keyless Entry Installation</li>
+            <li>Safe Opening, Repair &amp; Combination Changes</li>
+            <li>Master Key Systems for Multi-Unit Properties</li>
+            <li>Window &amp; Patio Door Lock Installation</li>
+            <li>Home Security Consultations</li>
+          </ul>
+          <a class="svc-call" href="tel:+12106193986"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call for home service</a>
+        </div>
+      </article>
+
+      <!-- Commercial -->
+      <article class="svc rv">
+        <div class="svc-media">
+          <img src="https://maximoseo.github.io/locksmith-premium-2026/images/commercial-service.jpg" alt="Commercial locksmith servicing an access control system for a San Antonio business" loading="lazy">
+          <span class="price">From $95</span>
+        </div>
+        <div class="svc-body">
+          <h3>Commercial Services</h3>
+          <p>Securing San Antonio businesses with enterprise-grade locksmith solutions tailored to your industry — from retail shops to corporate campuses, healthcare, education, and government facilities. Our commercial division serves 500+ local businesses with 24/7 emergency availability to minimize costly downtime.</p>
+          <details>
+            <summary>Read full service details</summary>
+            <p>We specialize in advanced access control systems that go far beyond traditional lock and key. Our installed systems include electronic keypad entry, proximity card readers, biometric scanners, mobile credential access via smartphone, and cloud-managed access platforms that provide real-time monitoring and detailed audit trails. These systems allow you to grant, restrict, or revoke access instantly without the cost and security risks of traditional key replacement. Master key systems and grand master key hierarchies provide flexible access levels across departments, floors, or entire building complexes while maintaining centralized administrative control.</p>
+            <p>Our commercial clients benefit from ongoing maintenance programs that include regular lock inspections, lubrication, adjustment, and preemptive replacement of worn components before failures occur. We work with all major commercial hardware brands including Von Duprin, Schlage commercial grade, Assa Abloy, Corbin Russwin, and Mul-T-Lock restricted keyway systems. For regulated industries, we ensure full compliance with fire codes, ADA requirements, OSHA standards, and industry-specific security mandates. Emergency services include lockout response, panic bar repairs, door closer adjustments, and after-hours lock changes following security incidents.</p>
+          </details>
+          <ul>
+            <li>Advanced Access Control &amp; Card Reader Systems</li>
+            <li>Master Key &amp; Grand Master Key Systems</li>
+            <li>High-Security Restricted Keyway Locks</li>
+            <li>Panic Bar &amp; Exit Device Installation</li>
+            <li>24/7 Commercial Emergency Lockout Service</li>
+            <li>Door Closer &amp; Hardware Installation</li>
+            <li>Storefront Lock Repair &amp; Replacement</li>
+            <li>Security Audits &amp; Compliance Consulting</li>
+          </ul>
+          <a class="svc-call" href="tel:+12106193986"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call for business service</a>
+        </div>
+      </article>
+
+      <!-- Automotive -->
+      <article class="svc rv">
+        <div class="svc-media">
+          <img src="https://maximoseo.github.io/locksmith-premium-2026/images/automotive-service.jpg" alt="Mobile automotive locksmith programming a car key in San Antonio" loading="lazy">
+          <span class="price">From $85</span>
+        </div>
+        <div class="svc-body">
+          <h3>Automotive Services</h3>
+          <p>Expert mobile automotive locksmiths for San Antonio drivers, 24/7 across Bexar County. Our fully-equipped mobile units are complete locksmith shops on wheels — advanced key cutting, transponder programming, and diagnostics for all makes and models, at your home, office, or roadside.</p>
+          <details>
+            <summary>Read full service details</summary>
+            <p>Modern vehicles have increasingly complex electronic security systems, and we maintain cutting-edge technology to service them all. Our services include transponder key programming for chip keys, smart key and proximity key fob programming, remote starter installation and programming, key extraction from broken ignitions or locks, and full ignition cylinder replacement when necessary. We work with all major automotive brands including Toyota, Honda, Ford, Chevrolet, Nissan, BMW, Mercedes-Benz, Audi, Volkswagen, Hyundai, Kia, Jeep, Dodge, Ram, and luxury brands. Our technicians receive manufacturer-specific training and maintain updated software for the latest vehicle security protocols.</p>
+            <p>Emergency automotive lockout service is our most requested service, and we pride ourselves on rapid response times—typically 20-30 minutes in the San Antonio metro area. We use professional lockout tools that prevent damage to your vehicle's paint, trim, and door seals, unlike improvised methods that can cause costly damage. For broken or lost keys, we can cut and program replacement keys on-site, often for significantly less than dealership prices. Our mobile units carry blank keys and programming equipment for most vehicle makes and models, eliminating towing costs and dealership delays. We also provide key duplication services, including high-security automotive keys with restricted blanks.</p>
+          </details>
+          <ul>
+            <li>24/7 Emergency Car Lockout Service</li>
+            <li>Transponder Key Programming (All Makes)</li>
+            <li>Smart Key &amp; Key Fob Replacement</li>
+            <li>Ignition Repair &amp; Replacement</li>
+            <li>Broken Key Extraction</li>
+            <li>Car Key Cutting &amp; Duplication</li>
+            <li>Trunk Opening Service</li>
+            <li>Mobile Service to Your Location</li>
+          </ul>
+          <a class="svc-call" href="tel:+12106193986"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call for auto service</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY US ==================== -->
+<section class="section section--tint" id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag tag--day">Why Choose Us</span>
+      <h2>Your Trusted Security Partner</h2>
+      <svg class="bit-rule" aria-hidden="true"><use href="#bit-sm"/></svg>
+      <p>Experience the difference of working with San Antonio's premier locksmith service.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why rv">
+        <span class="ic"><svg aria-hidden="true"><use href="#i-badge"/></svg></span>
+        <h3>Licensed &amp; Insured</h3>
+        <p>Fully licensed by the State of Texas (#B16307) with comprehensive liability and workers' compensation insurance for your complete protection and peace of mind.</p>
+      </div>
+      <div class="why rv">
+        <span class="ic"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+        <h3>Fast Response</h3>
+        <p>30-minute average arrival throughout San Antonio and Bexar County. When you're locked out, every minute counts — we prioritize emergency calls.</p>
+      </div>
+      <div class="why rv">
+        <span class="ic"><svg aria-hidden="true"><use href="#i-tagp"/></svg></span>
+        <h3>Upfront Pricing</h3>
+        <p>Transparent, competitive pricing with no hidden fees. We provide detailed quotes before starting work so you know exactly what to expect.</p>
+      </div>
+      <div class="why rv">
+        <span class="ic"><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+        <h3>Top Rated Service</h3>
+        <p>Proud 4.3-star rating from over 689 satisfied customers across San Antonio. Read our reviews and see why locals trust us with their security.</p>
+      </div>
+      <div class="why rv">
+        <span class="ic"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+        <h3>Certified Professionals</h3>
+        <p>Every technician is background checked, drug tested, and certified. Our team undergoes continuous training on the latest security technologies.</p>
+      </div>
+      <div class="why rv">
+        <span class="ic"><svg aria-hidden="true"><use href="#i-moon"/></svg></span>
+        <h3>Always Available</h3>
+        <p>True 24/7/365 emergency service. Day, night, weekends, or holidays — we answer every call and dispatch help immediately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== REVIEWS ==================== -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag tag--day">Customer Reviews</span>
+      <h2>What San Antonio Residents Say</h2>
+      <svg class="bit-rule" aria-hidden="true"><use href="#bit-sm"/></svg>
+      <p>Real experiences from our satisfied customers across the city.</p>
+    </div>
+
+    <div class="rev-grid">
+      <article class="rev rv">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"Locked out of my house at 2 AM and they arrived in 25 minutes! Professional, friendly, and got me back inside quickly. Highly recommend Elite Locksmith!"</blockquote>
+        <footer><span class="avi">MJ</span><span class="who"><b>Maria Johnson</b><span>Stone Oak, San Antonio</span></span></footer>
+      </article>
+
+      <article class="rev rv">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"Needed our office rekeyed after an employee left. They came same-day, rekeyed 15 locks in under 2 hours. Fair pricing and excellent work!"</blockquote>
+        <footer><span class="avi">RP</span><span class="who"><b>Robert Patterson</b><span>Downtown San Antonio</span></span></footer>
+      </article>
+
+      <article class="rev rv">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"Lost my car keys at the mall. They came to the parking lot, made me a new key with transponder programming right there. Saved me hundreds compared to the dealer!"</blockquote>
+        <footer><span class="avi">SC</span><span class="who"><b>Sarah Chen</b><span>Alamo Heights, San Antonio</span></span></footer>
+      </article>
+
+      <article class="rev rv">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"Installed smart locks on all our doors. Technician was knowledgeable, explained everything, and programmed them perfectly. Love our new keyless entry system!"</blockquote>
+        <footer><span class="avi">DM</span><span class="who"><b>David Martinez</b><span>The Dominion, San Antonio</span></span></footer>
+      </article>
+
+      <article class="rev rv">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"My elderly mother locked herself out. They were patient, kind, and gave her a senior discount. True professionals who care about their customers!"</blockquote>
+        <footer><span class="avi">LT</span><span class="who"><b>Lisa Thompson</b><span>Leon Valley, San Antonio</span></span></footer>
+      </article>
+
+      <article class="rev rv">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"Safe wouldn't open and had important documents inside. They opened it without damaging it and reset the combination. Lifesaver! Will use again."</blockquote>
+        <footer><span class="avi">JW</span><span class="who"><b>James Wilson</b><span>Helotes, San Antonio</span></span></footer>
+      </article>
+    </div>
+
+    <div class="rev-cta rv">
+      <p>Join 689+ satisfied customers in San Antonio</p>
+      <a class="btn btn--ink" href="tel:+12106193986"><svg aria-hidden="true"><use href="#i-phone"/></svg>Get Your Free Quote: (210) 619-3986</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICE AREAS + MAP ==================== -->
+<section class="section section--tint" id="areas">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag tag--day">Service Coverage</span>
+      <h2>Serving All of San Antonio &amp; Bexar County</h2>
+      <svg class="bit-rule" aria-hidden="true"><use href="#bit-sm"/></svg>
+      <p>Fast, reliable locksmith services throughout the greater San Antonio metropolitan area.</p>
+    </div>
+
+    <div class="areas-grid">
+      <div class="hood-grid rv">
+        <div class="hood">
+          <h4>Downtown &amp; Central</h4>
+          <ul><li>Downtown San Antonio</li><li>Alamo Heights</li><li>Terrell Hills</li><li>Monte Vista</li><li>King William</li></ul>
+        </div>
+        <div class="hood">
+          <h4>North San Antonio</h4>
+          <ul><li>Stone Oak</li><li>The Dominion</li><li>Castle Hills</li><li>Hollywood Park</li><li>Shavano Park</li></ul>
+        </div>
+        <div class="hood">
+          <h4>Northwest Area</h4>
+          <ul><li>Helotes</li><li>Leon Valley</li><li>Lackland AFB</li><li>Medical Center</li><li>Crossroads</li></ul>
+        </div>
+        <div class="hood">
+          <h4>Northeast &amp; East</h4>
+          <ul><li>Schertz</li><li>Cibolo</li><li>Live Oak</li><li>Windcrest</li><li>Universal City</li></ul>
+        </div>
+        <div class="hood">
+          <h4>South San Antonio</h4>
+          <ul><li>Southtown</li><li>Brooks City Base</li><li>Mission Valley</li><li>Southeast Side</li><li>South Park</li></ul>
+        </div>
+        <div class="hood">
+          <h4>Surrounding Cities</h4>
+          <ul><li>New Braunfels</li><li>Boerne</li><li>Seguin</li><li>Castroville</li><li>Bulverde</li></ul>
+        </div>
+      </div>
+
+      <div class="map-card rv">
+        <iframe title="Elite Locksmith San Antonio service area map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221540.18316815333!2d-98.74996445!3d29.424122299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c58af04d00eaf%3A0x856e13b10a016bc!2sSan%20Antonio%2C%20TX!5e0!3m2!1sen!2sus!4v1234567890" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-stats">
+          <div><span class="n">30<small>min</small></span><span class="l">Avg response</span></div>
+          <div><span class="n">100%</span><span class="l">Bexar County</span></div>
+          <div><span class="n">24/7</span><span class="l">Availability</span></div>
+          <div><span class="n">689+</span><span class="l">Customers</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="areas-cta rv">
+      <p><strong>Don't see your area listed?</strong> We serve the entire San Antonio metro area and beyond — call us to confirm coverage.</p>
+      <a class="btn btn--ink" href="tel:+12106193986"><svg aria-hidden="true"><use href="#i-pin"/></svg>Call (210) 619-3986 Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag tag--day">Frequently Asked Questions</span>
+      <h2>Common Locksmith Questions Answered</h2>
+      <svg class="bit-rule" aria-hidden="true"><use href="#bit-sm"/></svg>
+      <p>Everything you need to know about our locksmith services in San Antonio.</p>
+    </div>
+
+    <div class="faq-wrap rv">
+      <details class="faq" open>
+        <summary><span class="k">+</span>How fast can you respond to emergency lockout calls in San Antonio?</summary>
+        <div class="a"><p>Our average response time is 30 minutes or less for emergency lockout services throughout San Antonio and Bexar County. We have mobile units strategically positioned across the city to ensure rapid response 24/7/365, including holidays and weekends. When you're locked out of your home, car, or business, we understand every minute counts.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>What are your locksmith service rates in San Antonio?</summary>
+        <div class="a"><p>We provide transparent, upfront pricing with no hidden fees. Residential lockout services start at $75, commercial services at $95, and automotive lockouts at $85. The final price depends on the complexity of the job, time of day, and type of lock system. We always provide a free quote before starting any work, and accept cash, credit cards, and digital payments.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>Are you licensed and insured in San Antonio, Texas?</summary>
+        <div class="a"><p>Yes, absolutely! We are fully licensed, bonded, and insured to operate in San Antonio and throughout Bexar County. Our technicians hold Texas Department of Public Safety locksmith licenses and undergo continuous training on the latest security technologies. We carry comprehensive liability insurance to protect your property during every service call.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>Can you install smart locks and keyless entry systems?</summary>
+        <div class="a"><p>Yes! We specialize in modern smart lock installations including August, Yale, Schlage Encode, Kwikset Halo, and other leading brands. Our technicians are certified to install, program, and integrate smart locks with existing home automation systems. We also provide ongoing support and can help troubleshoot connectivity issues or reprogram access codes remotely.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>Do you offer services in areas outside San Antonio?</summary>
+        <div class="a"><p>Yes, we serve the entire San Antonio metro area including Stone Oak, Alamo Heights, The Dominion, Helotes, Leon Valley, Schertz, Cibolo, New Braunfels, Boerne, and all of Bexar County. We also provide service to Comal County, Guadalupe County, and parts of Medina County. Call us to confirm coverage in your specific area.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>What payment methods do you accept?</summary>
+        <div class="a"><p>We accept all major credit cards (Visa, MasterCard, American Express, Discover), debit cards, cash, Venmo, CashApp, Zelle, and business checks from established accounts. Payment is due upon completion of service. For commercial clients, we offer net-30 payment terms after credit approval.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>How long does a lock rekey take?</summary>
+        <div class="a"><p>A standard residential door lock rekey typically takes 10-15 minutes per lock. For a whole-house rekey (5-6 locks), expect about 45-90 minutes total. Commercial rekeying may take longer depending on the number of locks and complexity of the master key system. We can rekey multiple locks to work with a single key for your convenience, making it easy to secure your entire home with one master key.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>Can you make car keys with transponder chips?</summary>
+        <div class="a"><p>Yes, we program transponder keys, smart keys, key fobs, and proximity keys for all major vehicle makes and models. Our mobile units carry advanced key programming equipment to cut and program keys on-site. We can create new keys even if you've lost all existing keys, and our prices are typically 30-50% less than dealership rates with same-day service.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>Do you offer senior or military discounts?</summary>
+        <div class="a"><p>Yes! We proudly offer a 10% discount for active military, veterans, first responders, and seniors aged 65 and older on all non-emergency services. Please mention your eligibility when scheduling your appointment. Valid ID or proof of service is required at the time of service.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>Can you install smart locks with my existing deadbolt?</summary>
+        <div class="a"><p>Most smart locks are designed to replace your existing deadbolt completely. However, some models like the August Smart Lock can be installed over your existing deadbolt interior mechanism. During our free security consultation, we'll assess your current hardware and recommend the best smart lock solution that fits your door configuration, security needs, and budget.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>What should I do if I'm locked out at night?</summary>
+        <div class="a"><p>Call us immediately at (210) 619-3986. Our 24/7 emergency lockout service operates around the clock with no extra after-hours fees. Stay in a safe, well-lit area if possible. Our technician will arrive within 20-30 minutes on average and can unlock your door using non-destructive entry techniques. We'll also provide recommendations to prevent future lockouts.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>How often should I replace my locks?</summary>
+        <div class="a"><p>High-quality residential locks should be replaced every 7-10 years under normal use, or sooner if you notice difficulty turning the key, loose components, or visible wear. However, you should rekey or replace locks immediately after moving into a new home, losing keys, ending a relationship, or experiencing a break-in. Annual lock maintenance and lubrication can significantly extend lock lifespan.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>What brands of locks do you install and service?</summary>
+        <div class="a"><p>We install and service all major residential and commercial lock brands including Schlage, Kwikset, Yale, Medeco, Mul-T-Lock, Assa Abloy, August Smart Locks, Baldwin, Emtek, Von Duprin, Corbin Russwin, and more. We only recommend and install Grade 1 (highest security) and Grade 2 locks for our clients, avoiding lower-quality hardware that compromises your security.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>Can you extract a broken key from my lock?</summary>
+        <div class="a"><p>Yes, broken key extraction is one of our specialty services. Our technicians use professional extraction tools to carefully remove broken key fragments without damaging the lock cylinder. In most cases, we can extract the broken piece and cut a new key on-site so you can use the lock immediately. If the lock was damaged by the break, we can repair or replace it the same day.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary><span class="k">+</span>Do you provide commercial access control systems?</summary>
+        <div class="a"><p>Absolutely. We design, install, and maintain comprehensive commercial access control systems including electronic keypads, proximity card readers, biometric scanners, mobile credential access, and cloud-managed platforms. These systems provide detailed audit trails, remote access management, scheduled access control, and integration with your existing security cameras and alarm systems. We serve businesses of all sizes from single-door offices to multi-building corporate campuses.</p></div>
+      </details>
+    </div>
+
+    <div class="faq-cta rv">
+      <a class="btn btn--ink" href="tel:+12106193986"><svg aria-hidden="true"><use href="#i-phone"/></svg>Still Have Questions? Call (210) 619-3986</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider divider--to-night" aria-hidden="true">
+  <svg class="bitting" style="transform:scaleY(-1)"><use href="#bit"/></svg>
+</div>
+
+<!-- ==================== EMERGENCY BAND ==================== -->
+<section class="emergency">
+  <div class="wrap">
+    <span class="tag tag--night rv">Emergency Dispatch</span>
+    <h2 class="rv">Locked out right now?</h2>
+    <p class="rv">Don't wait — expert locksmiths are standing by with fully-stocked mobile units, ready to reach you within 30 minutes anywhere in San Antonio.</p>
+    <a class="hero-phone rv" href="tel:+12106193986">(210) 619-3986</a>
+    <div class="hero-ctas rv">
+      <a class="btn btn--brass btn--lg" href="tel:+12106193986"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
+      <a class="btn btn--ghost btn--lg" href="sms:+12106193986"><svg aria-hidden="true"><use href="#i-msg"/></svg>Text Us</a>
+    </div>
+    <div class="hero-tags rv">
+      <span class="keytag">Available <b>24/7/365</b></span>
+      <span class="keytag"><b>No</b> after-hours fees</span>
+      <span class="keytag">Licensed <b>&amp;</b> insured</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a class="logo" href="#top" aria-label="Elite Locksmith San Antonio — back to top">
+          <svg aria-hidden="true"><use href="#i-key"/></svg>
+          <span><span class="l1">Elite Locksmith</span><span class="l2">San Antonio · TX</span></span>
+        </a>
+        <p>San Antonio's premier locksmith service since 2008. We're a locally owned and operated company dedicated to protecting homes, businesses, and vehicles throughout the greater San Antonio area. Our commitment to excellence, rapid response times, and customer satisfaction has made us the trusted choice for thousands of San Antonio residents and business owners.</p>
+        <div class="foot-lic">
+          <span>Texas License <b>#B16307</b></span>
+          <span>Available <b>24/7/365</b> — call anytime</span>
+          <span>Serving San Antonio <b>since 2008</b></span>
+        </div>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#services">Residential Locksmith</a></li>
+          <li><a href="#services">Commercial Locksmith</a></li>
+          <li><a href="#services">Automotive Locksmith</a></li>
+          <li><a href="#services">Emergency Service</a></li>
+          <li><a href="#services">Smart Lock Installation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+12106193986">(210) 619-3986</a></li>
+          <li>314 E Nakoma Dr. Ste D</li>
+          <li>San Antonio, TX 78216</li>
+          <li><a href="mailto:info@elitelocksmith.com">info@elitelocksmith.com</a></li>
+          <li>24/7 Emergency Service</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Service Areas</h3>
+        <ul>
+          <li><a href="#areas">Downtown San Antonio</a></li>
+          <li><a href="#areas">Alamo Heights</a></li>
+          <li><a href="#areas">Stone Oak</a></li>
+          <li><a href="#areas">Medical Center</a></li>
+          <li><a href="#areas">All Bexar County</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Elite Locksmith San Antonio. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== MOBILE STICKY CALL BAR ==================== -->
+<a class="callbar" href="tel:+12106193986" aria-label="Call Elite Locksmith now at (210) 619-3986">
+  <svg aria-hidden="true"><use href="#i-phone"/></svg>Call Now · (210) 619-3986
+</a>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
