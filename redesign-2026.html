@@ -233,6 +233,209 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .dispatch .live{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.2rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#9FE3B0}
 .dispatch .dot{width:.55rem;height:.55rem;border-radius:50%;background:#3ECF6A;box-shadow:0 0 0 0 rgba(62,207,106,.5);animation:pulse 1.8s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(62,207,106,0)}100%{box-shadow:0 0 0 0 rgba(62,207,106,0)}}
+
+/* ============================================================
+   KEY-BITTING DIVIDER
+   ============================================================ */
+.divider{position:relative;height:64px;overflow:hidden}
+.divider--to-day{background:linear-gradient(to bottom, var(--ink) 0%, var(--day) 100%)}
+.divider--to-night{background:linear-gradient(to bottom, var(--day) 0%, var(--ink) 100%)}
+.divider .bitting{position:absolute;bottom:0;left:0;right:0;width:100%;height:64px;color:var(--brass);opacity:.85}
+
+/* ============================================================
+   SECTIONS (day mode)
+   ============================================================ */
+.section{padding:clamp(3.5rem,7vw,5.5rem) 0;background:var(--day)}
+.section--tint{background:#FAFBFB}
+
+/* ============================================================
+   SERVICES GRID
+   ============================================================ */
+.svc-grid{display:grid;gap:2.5rem}
+.svc{display:grid;grid-template-columns:380px 1fr;gap:2rem;background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm)}
+@media(max-width:940px){
+  .svc{grid-template-columns:1fr;gap:0}
+}
+.svc-media{position:relative;overflow:hidden}
+.svc-media img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.svc:hover .svc-media img{transform:scale(1.05)}
+.svc-media .price{
+  position:absolute;top:1.2rem;right:1.2rem;
+  font-family:var(--disp);font-weight:700;font-size:1.15rem;letter-spacing:.05em;
+  background:var(--brass);color:var(--ink);padding:.6rem 1.1rem;border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);text-transform:uppercase;
+}
+.svc-body{padding:2rem 2rem 2.4rem}
+.svc-body h3{margin-bottom:.8rem;color:var(--ink)}
+.svc-body > p{color:var(--text);margin-bottom:1.2rem;line-height:1.7}
+.svc-body details{margin:1.2rem 0}
+.svc-body summary{cursor:pointer;font-weight:600;color:var(--brass-deep);text-decoration:underline;margin-bottom:.6rem}
+.svc-body details[open] summary{margin-bottom:1rem}
+.svc-body details p{color:var(--muted);font-size:.95rem;line-height:1.75;margin-bottom:.9rem}
+.svc-body ul{list-style:none;margin:1.4rem 0;display:grid;gap:.5rem}
+.svc-body ul li{position:relative;padding-left:1.6rem;color:var(--text);font-size:.95rem}
+.svc-body ul li::before{
+  content:"✓";position:absolute;left:0;top:0;
+  font-weight:700;color:var(--brass-deep);
+}
+.svc-call{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--mono);font-weight:600;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;margin-top:1.2rem;
+  padding:.8rem 1.3rem;background:var(--day);border-radius:8px;
+  transition:background .2s, transform .2s;
+}
+.svc-call:hover{background:var(--brass);transform:translateX(4px)}
+.svc-call svg{width:1.1em;height:1.1em}
+
+/* ============================================================
+   WHY US GRID
+   ============================================================ */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.8rem}
+.why{background:var(--card);padding:2rem 1.8rem;border-radius:var(--r);box-shadow:var(--shadow-sm);text-align:center}
+.why .ic{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:68px;height:68px;border-radius:50%;
+  background:linear-gradient(135deg, var(--brass-hi) 0%, var(--brass) 100%);
+  color:var(--ink);margin-bottom:1.2rem;
+}
+.why .ic svg{width:32px;height:32px}
+.why h3{margin-bottom:.7rem;color:var(--ink);font-size:1.3rem}
+.why p{color:var(--muted);font-size:.95rem;line-height:1.7}
+
+/* ============================================================
+   REVIEWS GRID
+   ============================================================ */
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.8rem;margin-bottom:2.5rem}
+.rev{background:var(--card);padding:1.8rem 1.7rem;border-radius:var(--r);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:1rem}
+.rev .stars{display:flex;gap:.3rem;color:var(--brass)}
+.rev .stars svg{width:18px;height:18px}
+.rev blockquote{flex:1;font-style:italic;color:var(--text);line-height:1.75;font-size:.98rem}
+.rev footer{display:flex;gap:.9rem;align-items:center;border-top:1px solid var(--line);padding-top:1.2rem}
+.rev .avi{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg, var(--brass-deep) 0%, var(--brass) 100%);
+  color:#fff;font-family:var(--disp);font-weight:700;font-size:.95rem;
+  flex:none;
+}
+.rev .who{display:flex;flex-direction:column;gap:.2rem}
+.rev .who b{color:var(--ink);font-size:.95rem}
+.rev .who span{font-size:.82rem;color:var(--muted)}
+.rev-cta{text-align:center;margin-top:2rem}
+.rev-cta p{font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:1.2rem}
+
+/* ============================================================
+   SERVICE AREAS + MAP
+   ============================================================ */
+.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+@media(max-width:940px){.areas-grid{grid-template-columns:1fr}}
+.hood-grid{display:grid;gap:1.5rem}
+.hood{background:var(--card);padding:1.5rem 1.6rem;border-radius:var(--r);box-shadow:var(--shadow-sm)}
+.hood h4{font-family:var(--disp);font-size:1.2rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);margin-bottom:.8rem}
+.hood ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem}
+.hood ul li{
+  font-size:.85rem;color:var(--muted);
+  padding:.4rem .8rem;background:var(--day);border-radius:6px;
+}
+.map-card{position:sticky;top:120px;background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.map-card iframe{width:100%;height:380px;border:0;display:block}
+.map-stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink);color:#fff}
+@media(max-width:600px){.map-stats{grid-template-columns:repeat(2,1fr)}}
+.map-stats > div{text-align:center;padding:1.2rem .8rem;border-right:1px solid var(--line-ink)}
+.map-stats > div:last-child{border-right:0}
+.map-stats .n{display:block;font-family:var(--disp);font-weight:800;font-size:1.6rem;color:var(--brass);line-height:1}
+.map-stats .n small{font-size:.7em;font-weight:600}
+.map-stats .l{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#8FA0AC;margin-top:.5rem}
+.areas-cta{text-align:center;margin-top:2.5rem}
+.areas-cta p{font-size:1.05rem;color:var(--text);margin-bottom:1.2rem}
+.areas-cta strong{color:var(--brass-deep)}
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+.faq-wrap{max-width:880px;margin:0 auto;display:grid;gap:1rem;margin-bottom:2.5rem}
+.faq{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm)}
+.faq summary{
+  display:flex;align-items:center;gap:1rem;
+  padding:1.4rem 1.6rem;cursor:pointer;font-weight:600;color:var(--ink);font-size:1.05rem;
+  transition:background .2s;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{background:var(--day)}
+.faq summary .k{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;
+  background:var(--brass);color:var(--ink);
+  font-family:var(--disp);font-weight:700;font-size:1.4rem;
+  flex:none;transition:transform .2s;
+}
+.faq[open] summary .k{transform:rotate(45deg)}
+.faq .a{padding:0 1.6rem 1.6rem 4.8rem;color:var(--text);line-height:1.75}
+.faq .a p{margin-bottom:.9rem}
+.faq .a p:last-child{margin-bottom:0}
+.faq-cta{text-align:center;margin-top:2rem}
+
+/* ============================================================
+   EMERGENCY BAND (night)
+   ============================================================ */
+.emergency{
+  position:relative;background:var(--ink-2);color:#E9EEF2;
+  padding:clamp(3rem,6vw,4.5rem) 0;text-align:center;overflow:hidden;
+}
+.emergency::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(800px 400px at 50% 50%, rgba(216,162,63,.12), transparent 70%);
+}
+.emergency .wrap{position:relative}
+.emergency .tag{display:inline-block;margin-bottom:1rem}
+.emergency h2{color:#fff;font-size:clamp(2.4rem,5.5vw,4.2rem);margin-bottom:1rem}
+.emergency > .wrap > p{color:#B9C6CF;font-size:1.1rem;max-width:620px;margin:0 auto 1.8rem}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer.site{background:var(--ink);color:#B9C6CF;padding:3.5rem 0 1.5rem;border-top:1px solid var(--line-ink)}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:2.5rem 2rem;margin-bottom:2.5rem}
+@media(max-width:940px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:600px){.foot-grid{grid-template-columns:1fr}}
+.foot-about .logo{margin-bottom:1.2rem}
+.foot-about p{font-size:.92rem;line-height:1.75;color:#8FA0AC;margin-bottom:1.5rem}
+.foot-lic{display:flex;flex-direction:column;gap:.5rem}
+.foot-lic span{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#7E909C}
+.foot-lic b{color:var(--brass);font-weight:600}
+.foot-grid h3{font-family:var(--disp);font-size:1.15rem;letter-spacing:.05em;text-transform:uppercase;color:#fff;margin-bottom:1rem}
+.foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.foot-grid ul li{font-size:.9rem}
+.foot-grid ul a{text-decoration:none;transition:color .15s}
+.foot-grid ul a:hover{color:var(--brass)}
+.foot-bottom{border-top:1px solid var(--line-ink);padding-top:1.5rem;text-align:center}
+.foot-bottom p{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#7E909C}
+
+/* ============================================================
+   MOBILE STICKY CALL BAR
+   ============================================================ */
+.callbar{
+  position:fixed;bottom:0;left:0;right:0;z-index:999;
+  display:flex;align-items:center;justify-content:center;gap:.7rem;
+  background:var(--brass);color:var(--ink);
+  padding:1.1rem 1.5rem;text-decoration:none;
+  font-family:var(--disp);font-weight:700;font-size:1.15rem;letter-spacing:.05em;text-transform:uppercase;
+  box-shadow:0 -4px 20px rgba(0,0,0,.15);
+  transition:background .2s;
+}
+.callbar:active{background:var(--brass-hi)}
+.callbar svg{width:1.3em;height:1.3em}
+@media(min-width:941px){.callbar{display:none}}
+
+/* ============================================================
+   REVEAL ANIMATIONS
+   ============================================================ */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .6s ease, transform .6s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion: reduce){
+  .rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
