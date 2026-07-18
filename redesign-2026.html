@@ -45,6 +45,16 @@
   --r: 14px;
   --shadow: 0 10px 30px rgba(15,25,34,.10);
   --shadow-sm: 0 4px 14px rgba(15,25,34,.08);
+
+  /* Spacing scale (8px baseline) */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 0.75rem;  /* 12px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2rem;     /* 32px */
+  --space-2xl: 3rem;    /* 48px */
+  --space-3xl: 4rem;    /* 64px */
+  --space-4xl: 6rem;    /* 96px */
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -114,9 +124,23 @@ h3{font-size:1.45rem;letter-spacing:.02em}
   .rev-cta .btn,.areas-cta .btn,.faq-cta .btn{width:100%}
 }
 .btn svg{width:1.1em;height:1.1em;flex:none}
-.btn--brass{background:var(--brass);color:var(--ink);box-shadow:0 6px 20px rgba(216,162,63,.35)}
-.btn--brass:hover{background:var(--brass-hi);transform:translateY(-2px);box-shadow:0 10px 26px rgba(216,162,63,.45)}
-.btn--ghost{border:1.5px solid var(--line-ink);color:#E8EDF1;background:transparent}
+.btn--brass{
+  background:linear-gradient(135deg, var(--brass) 0%, var(--brass-hi) 100%);
+  color:var(--ink);
+  box-shadow:0 6px 20px rgba(216,162,63,.4),0 2px 8px rgba(216,162,63,.3),inset 0 1px 0 rgba(255,255,255,.3);
+  position:relative;overflow:hidden;
+}
+.btn--brass::before{
+  content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  background:linear-gradient(45deg,transparent,rgba(255,255,255,.1),transparent);
+  transform:translateX(-100%);transition:transform .6s;
+}
+.btn--brass:hover::before{transform:translateX(100%)}
+.btn--brass:hover{
+  transform:translateY(-3px) scale(1.02);
+  box-shadow:0 12px 32px rgba(216,162,63,.5),0 4px 12px rgba(216,162,63,.4);
+}
+.btn--ghost{border:1.5px solid var(--line-ink);color:#E8EDF1;background:transparent;opacity:.85}
 .btn--ghost:hover{border-color:var(--brass);color:var(--brass);transform:translateY(-2px)}
 .btn--ink{background:var(--ink);color:#fff}
 .btn--ink:hover{background:var(--ink-3);transform:translateY(-2px)}
@@ -185,6 +209,15 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .hero .wrap{position:relative;padding-top:clamp(3.4rem,7vw,5.5rem);padding-bottom:clamp(3rem,6vw,4.5rem)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
 @media(max-width:940px){.hero-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .hero-phone{
+    font-size:clamp(2.8rem,12vw,3.6rem);
+    margin:1.5rem 0 1rem;
+  }
+  .hero-ctas{flex-direction:column;width:100%}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .dispatch{margin-top:2rem}
+}
 
 .hero .tag{display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.3rem}
 .hero .tag i{width:26px;height:1px;background:var(--brass);display:inline-block}
@@ -199,17 +232,36 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .hero-phone{
   display:inline-block;text-decoration:none;line-height:.95;
   font-family:var(--disp);font-weight:800;text-transform:uppercase;
-  font-size:clamp(2.5rem,6.5vw,4.6rem);letter-spacing:.01em;
-  color:var(--brass);margin-bottom:.4rem;
+  font-size:clamp(3.2rem,8vw,5.8rem);letter-spacing:.01em;
+  color:var(--brass);margin:1.8rem 0 1.2rem;
   transition:color .15s;
+  animation:pulse-glow 2s infinite;
 }
 .hero-phone:hover{color:var(--brass-hi)}
+@keyframes pulse-glow{
+  0%,100%{text-shadow:0 0 20px rgba(216,162,63,.4)}
+  50%{text-shadow:0 0 30px rgba(216,162,63,.7),0 0 60px rgba(216,162,63,.3)}
+}
 .hero-phone small{
   display:block;font-family:var(--mono);font-weight:600;font-size:.7rem;
   letter-spacing:.26em;color:#8FA0AC;margin-bottom:.5rem;
 }
-.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin:1.4rem 0 2rem}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2.5rem}
 .hero-tags{display:flex;flex-wrap:wrap;gap:.6rem}
+
+/* trust bar */
+.trust-bar{
+  display:flex;gap:var(--space-xl);flex-wrap:wrap;
+  margin-top:var(--space-2xl);padding-top:var(--space-xl);
+  border-top:1px solid var(--line-ink);
+}
+.trust-item{
+  display:flex;align-items:center;gap:var(--space-sm);
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;
+  text-transform:uppercase;color:#8FA0AC;
+}
+.trust-item svg{width:28px;height:28px;color:var(--brass);flex:none}
+.trust-item b{color:var(--brass);font-weight:700;display:block}
 
 /* dispatch card */
 .dispatch{
@@ -235,6 +287,39 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(62,207,106,0)}100%{box-shadow:0 0 0 0 rgba(62,207,106,0)}}
 
 /* ============================================================
+   SOCIAL PROOF BAND
+   ============================================================ */
+.social-proof{
+  background:var(--brass);
+  padding:var(--space-xl) 0;
+  border-bottom:3px solid var(--brass-deep);
+}
+.proof-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:var(--space-lg);
+  text-align:center;
+}
+.proof-stat{display:flex;flex-direction:column;gap:var(--space-xs)}
+.proof-num{
+  font-family:var(--disp);
+  font-size:2.5rem;
+  font-weight:800;
+  color:var(--ink);
+  line-height:1;
+}
+.proof-lbl{
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+}
+@media(max-width:600px){
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ============================================================
    KEY-BITTING DIVIDER
    ============================================================ */
 .divider{position:relative;height:64px;overflow:hidden}
@@ -252,7 +337,17 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
    SERVICES GRID
    ============================================================ */
 .svc-grid{display:grid;gap:2.5rem}
-.svc{display:grid;grid-template-columns:380px 1fr;gap:2rem;background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm)}
+.svc{
+  display:grid;grid-template-columns:380px 1fr;gap:2rem;
+  background:var(--card);border-radius:var(--r);overflow:hidden;
+  box-shadow:0 4px 6px rgba(15,25,34,.06),0 10px 20px rgba(15,25,34,.08);
+  border:1px solid rgba(15,25,34,.08);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.svc:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 12px rgba(15,25,34,.1),0 20px 40px rgba(15,25,34,.12);
+}
 @media(max-width:940px){
   .svc{grid-template-columns:1fr;gap:0}
 }
@@ -355,7 +450,16 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
    FAQ ACCORDION
    ============================================================ */
 .faq-wrap{max-width:880px;margin:0 auto;display:grid;gap:1rem;margin-bottom:2.5rem}
-.faq{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm)}
+.faq{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:all .2s ease;
+}
+.faq:hover{border-color:var(--brass);box-shadow:0 4px 12px rgba(216,162,63,.15)}
+.faq[open]{
+  background:linear-gradient(to bottom, #fff 0%, #FAFBFB 100%);
+  border-color:var(--brass);
+}
+.faq[open] summary{background:var(--day);border-bottom:1px solid var(--line)}
 .faq summary{
   display:flex;align-items:center;gap:1rem;
   padding:1.4rem 1.6rem;cursor:pointer;font-weight:600;color:var(--ink);font-size:1.05rem;
@@ -508,6 +612,21 @@ footer.site{background:var(--ink);color:#B9C6CF;padding:3.5rem 0 1.5rem;border-t
           <div class="keytag"><b>689+</b> HAPPY CUSTOMERS</div>
           <div class="keytag"><b>30-MIN</b> RESPONSE</div>
         </div>
+
+        <div class="trust-bar">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-shield"/></svg>
+            <span>TX Licensed<br><b>#B16307</b></span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg>
+            <span>4.3★ Rating<br><b>689 Reviews</b></span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-bolt"/></svg>
+            <span>Since 2008<br><b>15+ Years</b></span>
+          </div>
+        </div>
       </div>
 
       <div class="dispatch">
@@ -529,6 +648,30 @@ footer.site{background:var(--ink);color:#B9C6CF;padding:3.5rem 0 1.5rem;border-t
           <span class="dot"></span>
           UNITS DISPATCHED NOW
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SOCIAL PROOF ==================== -->
+<section class="social-proof">
+  <div class="wrap">
+    <div class="proof-grid rv">
+      <div class="proof-stat">
+        <span class="proof-num">689+</span>
+        <span class="proof-lbl">Happy Customers</span>
+      </div>
+      <div class="proof-stat">
+        <span class="proof-num">&lt;30min</span>
+        <span class="proof-lbl">Avg Response</span>
+      </div>
+      <div class="proof-stat">
+        <span class="proof-num">24/7/365</span>
+        <span class="proof-lbl">Always Available</span>
+      </div>
+      <div class="proof-stat">
+        <span class="proof-num">$0</span>
+        <span class="proof-lbl">Hidden Fees</span>
       </div>
     </div>
   </div>
