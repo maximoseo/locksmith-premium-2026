@@ -93,8 +93,8 @@
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%),
-                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.92) 100%),
+                        url('images/hero-emergency.jpg') center/cover no-repeat;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -355,8 +355,10 @@
 
         /* Trust */
         .trust {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%),
+                        url('images/team-trust.jpg') center/cover no-repeat;
             color: var(--white);
+            position: relative;
         }
 
         .trust-grid {
@@ -714,6 +716,67 @@
     </section>
 
     <!-- CTA -->
+    <!-- Service Area Map -->
+    <section id="service-area" style="padding: 6rem 2rem; background: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <span class="tag">SERVICE COVERAGE</span>
+                <h2>Serving All of San Antonio & Bexar County</h2>
+                <p>Fast, reliable locksmith services throughout the greater San Antonio metropolitan area</p>
+            </div>
+            
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.1); height: 450px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221540.18316815333!2d-98.74996445!3d29.424122299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c58af04d00eaf%3A0x856e13b10a016bc!2sSan%20Antonio%2C%20TX!5e0!3m2!1sen!2sus!4v1234567890" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <h3 style="color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem;">30min</h3>
+                    <p style="color: var(--gray); font-weight: 500;">Average Response Time</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <h3 style="color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem;">100%</h3>
+                    <p style="color: var(--gray); font-weight: 500;">Coverage in Bexar County</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <h3 style="color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem;">24/7</h3>
+                    <p style="color: var(--gray); font-weight: 500;">Emergency Availability</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <h3 style="color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem;">689+</h3>
+                    <p style="color: var(--gray); font-weight: 500;">Satisfied Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency CTA Banner -->
+    <section style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); padding: 4rem 2rem; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('images/team-trust.jpg') center/cover; opacity: 0.15;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; color: white;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Locked Out? We're Here to Help!</h2>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.95;">Don't wait - our expert locksmiths are standing by with fully-stocked mobile units ready to reach you within 30 minutes anywhere in San Antonio.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:+12106193986" style="background: white; color: var(--accent); padding: 1.25rem 2.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.125rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s; display: inline-block;">
+                        📞 CALL NOW: (210) 619-3986
+                    </a>
+                    <a href="sms:+12106193986" style="background: rgba(255,255,255,0.2); color: white; padding: 1.25rem 2.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.125rem; backdrop-filter: blur(10px); border: 2px solid white; transition: all 0.3s; display: inline-block;">
+                        💬 TEXT US
+                    </a>
+                </div>
+                <p style="margin-top: 1.5rem; font-size: 0.875rem; opacity: 0.9;">Available 24/7/365 • Licensed & Insured • 30-Min Response</p>
+            </div>
+        </div>
+    </section>
     <section class="cta-section">
         <div class="container">
             <h2>Need Emergency Locksmith Service?</h2>
