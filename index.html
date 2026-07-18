@@ -6,7 +6,7 @@
     <title>Elite Locksmith San Antonio | 24/7 Emergency Service - Professional Lock Solutions</title>
     <meta name="description" content="San Antonio's #1 rated locksmith service - 24/7 emergency response, 30-min arrival, licensed & insured. Residential, commercial & automotive lock solutions. Call (210) 619-3986">
     <link rel="stylesheet" href="https://use.typekit.net/hqc3xoe.css">
-    
+
     <style>
         * {
             margin: 0;
@@ -38,7 +38,7 @@
             background: var(--white);
         }
 
-        /* Header */
+        /* Header with Sticky Phone */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             padding: 1.25rem 0;
@@ -70,6 +70,33 @@
 
         .logo span {
             color: var(--accent);
+        }
+
+        /* Sticky Phone in Header */
+        .header-phone {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: "acumin-pro", sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(249,115,22,0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header-phone::before {
+            content: '📞';
+            font-size: 1.125rem;
+        }
+
+        .header-phone:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249,115,22,0.5);
         }
 
         .cta-btn {
@@ -155,12 +182,76 @@
             line-height: 1.7;
         }
 
+        /* Emergency vs Scheduled CTAs Split */
         .hero-buttons {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-emergency {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: var(--white);
+            padding: 1.5rem 3rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: "acumin-pro", sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            box-shadow: 0 8px 25px rgba(220,38,38,0.35);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+            animation: pulse-emergency 2s infinite;
+        }
+
+        .btn-emergency::before {
+            content: '🚨';
+            font-size: 1.5rem;
+        }
+
+        .btn-emergency:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(220,38,38,0.5);
+        }
+
+        @keyframes pulse-emergency {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(220,38,38,0.35);
+            }
+            50% {
+                box-shadow: 0 8px 40px rgba(220,38,38,0.6);
+            }
+        }
+
+        .btn-scheduled {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: var(--white);
+            padding: 1.5rem 3rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: "acumin-pro", sans-serif;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: 0 8px 25px rgba(249,115,22,0.35);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-scheduled::before {
+            content: '📅';
+            font-size: 1.25rem;
+        }
+
+        .btn-scheduled:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(249,115,22,0.5);
         }
 
         .btn-primary {
@@ -198,6 +289,43 @@
         .btn-secondary:hover {
             background: rgba(255,255,255,0.15);
             border-color: var(--accent);
+        }
+
+        /* Response Time Guarantee Badge */
+        .response-guarantee {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(34,197,94,0.15);
+            border: 2px solid var(--success);
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .response-guarantee::before {
+            content: '⚡';
+            font-size: 2rem;
+        }
+
+        .response-guarantee-text {
+            text-align: left;
+        }
+
+        .response-guarantee-title {
+            font-family: "acumin-pro", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--success);
+            display: block;
+            line-height: 1.2;
+        }
+
+        .response-guarantee-subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+            display: block;
         }
 
         .stats {
@@ -238,6 +366,49 @@
             color: rgba(255,255,255,0.9);
             font-size: 1rem;
             font-weight: 500;
+        }
+
+        /* Trust Bar with Urgency Signals */
+        .trust-bar {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 2rem 2rem;
+            border-top: 3px solid var(--accent);
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .trust-bar-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-bar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--white);
+        }
+
+        .trust-bar-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-bar-title {
+            font-family: "acumin-pro", sans-serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .trust-bar-text {
+            font-size: 0.9375rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.5;
         }
 
         /* Section */
@@ -495,14 +666,72 @@
             color: rgba(255,255,255,0.6);
         }
 
+        /* Mobile Click-to-Call Button (Fixed Bottom) */
+        .mobile-cta-fixed {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            padding: 0;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+        }
+
+        .mobile-cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            width: 100%;
+            height: 56px;
+            color: white;
+            text-decoration: none;
+            font-family: 'acumin-pro', sans-serif;
+            font-weight: 800;
+            font-size: 1.125rem;
+            padding: 0 1.5rem;
+            animation: pulse-mobile 2s infinite;
+        }
+
+        .mobile-cta-btn::before {
+            content: '📞';
+            font-size: 1.5rem;
+        }
+
+        @keyframes pulse-mobile {
+            0%, 100% {
+                background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            }
+            50% {
+                background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            }
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
+            /* Show mobile fixed CTA */
+            .mobile-cta-fixed {
+                display: block;
+            }
+
+            /* Add bottom padding to body to prevent content hiding behind fixed CTA */
+            body {
+                padding-bottom: 56px;
+            }
+
             nav {
                 padding: 0 1rem;
             }
 
             .logo {
                 font-size: 1.25rem;
+            }
+
+            .header-phone {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9375rem;
             }
 
             .cta-btn {
@@ -528,12 +757,30 @@
                 gap: 1rem;
             }
 
+            .btn-emergency,
+            .btn-scheduled,
             .btn-primary,
             .btn-secondary {
                 width: 100%;
                 padding: 1.125rem 2rem;
                 font-size: 1rem;
                 text-align: center;
+                justify-content: center;
+            }
+
+            .response-guarantee {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem 1.5rem;
+            }
+
+            .response-guarantee-text {
+                text-align: center;
+            }
+
+            .trust-bar-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
             }
 
             .stats {
@@ -648,6 +895,10 @@
             .emergency-cta::before {
                 top: 20px;
                 right: 20px;
+            }
+
+            .trust-bar-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -823,10 +1074,22 @@
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
+
+            /* Hide desktop sticky CTA on mobile (mobile fixed CTA takes priority) */
+            .sticky-cta {
+                display: none;
+            }
         }
     </style>
 
-    <!-- Sticky CTA -->
+    <!-- Mobile Fixed CTA -->
+    <div class="mobile-cta-fixed">
+        <a href="tel:+12106193986" class="mobile-cta-btn">
+            EMERGENCY LOCKOUT? CALL NOW!
+        </a>
+    </div>
+
+    <!-- Desktop Sticky CTA -->
     <div class="sticky-cta">
         <a href="tel:+12106193986" class="sticky-call-btn">
             CALL NOW
@@ -968,23 +1231,32 @@
     </section>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header with Sticky Phone -->
     <header>
         <nav>
             <a href="#" class="logo">Elite <span>Locksmith</span></a>
-            <a href="tel:+12106193986" class="cta-btn">(210) 619-3986</a>
+            <a href="tel:+12106193986" class="header-phone">(210) 619-3986</a>
         </nav>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero with Emergency/Scheduled Split + Response Time Guarantee -->
     <section class="hero">
         <div class="hero-content">
             <h1>San Antonio's <span class="highlight">#1 Locksmith</span> Service</h1>
             <p>Professional, Fast & Reliable Lock Solutions Available 24/7/365. Licensed, insured, and trusted by over 689 satisfied customers across San Antonio and Bexar County. When you need a locksmith you can trust, we're here with 30-minute response times and upfront pricing. Your security is our top priority.</p>
-            
+
+            <!-- Response Time Guarantee Above Fold -->
+            <div class="response-guarantee">
+                <div class="response-guarantee-text">
+                    <span class="response-guarantee-title">30-Min Arrival Time</span>
+                    <span class="response-guarantee-subtitle">Guaranteed Response Across San Antonio</span>
+                </div>
+            </div>
+
+            <!-- Emergency vs Scheduled CTAs Split -->
             <div class="hero-buttons">
-                <a href="tel:+12106193986" class="btn-primary">CALL NOW: (210) 619-3986</a>
-                <a href="#services" class="btn-secondary">VIEW SERVICES</a>
+                <a href="tel:+12106193986" class="btn-emergency">EMERGENCY LOCKOUT</a>
+                <a href="tel:+12106193986" class="btn-scheduled">Schedule Service</a>
             </div>
 
             <div class="stats">
@@ -1007,6 +1279,32 @@
             </div>
         </div>
     </section>
+
+    <!-- Trust Bar with Urgency Signals -->
+    <div class="trust-bar">
+        <div class="trust-bar-grid">
+            <div class="trust-bar-item">
+                <span class="trust-bar-icon">🏆</span>
+                <div class="trust-bar-title">Licensed & Insured</div>
+                <div class="trust-bar-text">Texas DPS Certified</div>
+            </div>
+            <div class="trust-bar-item">
+                <span class="trust-bar-icon">🔒</span>
+                <div class="trust-bar-title">24/7 Emergency</div>
+                <div class="trust-bar-text">Always Available</div>
+            </div>
+            <div class="trust-bar-item">
+                <span class="trust-bar-icon">💰</span>
+                <div class="trust-bar-title">Upfront Pricing</div>
+                <div class="trust-bar-text">No Hidden Fees</div>
+            </div>
+            <div class="trust-bar-item">
+                <span class="trust-bar-icon">⚡</span>
+                <div class="trust-bar-title">30-Min Response</div>
+                <div class="trust-bar-text">Fast Arrival Guaranteed</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Services -->
     <section id="services">
@@ -1147,7 +1445,7 @@
             <div style="max-width: 1000px; margin: 0 auto;">
                 <div style="background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%); padding: 3rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 3rem;">
                     <h3 style="color: var(--primary); font-family: 'acumin-pro', sans-serif; font-size: 1.75rem; margin-bottom: 1.5rem; text-align: center;">San Antonio Neighborhoods We Serve</h3>
-                    
+
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
                         <div style="text-align: center;">
                             <h4 style="color: var(--accent); font-weight: 600; margin-bottom: 0.75rem;">Downtown & Central</h4>
@@ -1334,19 +1632,19 @@
                 <h2>Serving All of San Antonio & Bexar County</h2>
                 <p>Fast, reliable locksmith services throughout the greater San Antonio metropolitan area</p>
             </div>
-            
+
             <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.1); height: 450px;">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221540.18316815333!2d-98.74996445!3d29.424122299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c58af04d00eaf%3A0x856e13b10a016bc!2sSan%20Antonio%2C%20TX!5e0!3m2!1sen!2sus!4v1234567890" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221540.18316815333!2d-98.74996445!3d29.424122299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c58af04d00eaf%3A0x856e13b10a016bc!2sSan%20Antonio%2C%20TX!5e0!3m2!1sen!2sus!4v1234567890"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-            
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
                 <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
                     <h3 style="color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem;">30min</h3>
