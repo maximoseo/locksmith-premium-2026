@@ -93,7 +93,8 @@
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80') center/cover no-repeat;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -289,11 +290,23 @@
 
         .service-card {
             background: var(--white);
-            padding: 3rem;
+            padding: 0;
             border-radius: 12px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
+            overflow: hidden;
+        }
+
+        .service-card-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-card-content {
+            padding: 3rem;
         }
 
         .service-card:hover {
@@ -606,6 +619,8 @@
 
             <div class="services-grid">
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Residential Locksmith Services" class="service-card-image">
+                    <div class="service-card-content">
                     <h3>Residential Services</h3>
                     <p>Protecting San Antonio homes with comprehensive residential locksmith solutions. Whether you're locked out at 3 AM or upgrading to the latest smart lock technology, our certified technicians provide fast, reliable service with a smile. We specialize in high-security deadbolts, keyless entry systems, and complete home security assessments.</p>
                     <ul>
@@ -618,9 +633,12 @@
                         <li>Window & Patio Door Lock Installation</li>
                         <li>Home Security Consultations</li>
                     </ul>
+                    </div>
                 </div>
 
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80" alt="Commercial Locksmith Services" class="service-card-image">
+                    <div class="service-card-content">
                     <h3>Commercial Services</h3>
                     <p>Securing San Antonio businesses with enterprise-grade commercial locksmith solutions. From retail stores to office buildings and industrial facilities, we provide customized security systems that protect your assets, employees, and customers. Our commercial specialists are available 24/7 to minimize downtime and keep your business secure.</p>
                     <ul>
@@ -633,9 +651,12 @@
                         <li>Storefront Lock Repair & Replacement</li>
                         <li>Security Audits & Compliance Consulting</li>
                     </ul>
+                    </div>
                 </div>
 
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80" alt="Automotive Locksmith Services" class="service-card-image">
+                    <div class="service-card-content">
                     <h3>Automotive Services</h3>
                     <p>Expert automotive locksmith services for San Antonio drivers. Lost your keys? Locked out of your car? Our mobile units arrive quickly with state-of-the-art key cutting and programming equipment. We service all major makes and models, from classic vehicles to the latest smart key systems, and we come to you anywhere in the San Antonio area.</p>
                     <ul>
@@ -648,6 +669,7 @@
                         <li>High-Security Vehicle Keys</li>
                         <li>Mobile Service - We Come to You</li>
                     </ul>
+                    </div>
                 </div>
             </div>
         </div>
