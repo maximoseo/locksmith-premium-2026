@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Sitemap: https://maximoseo.github.io/locksmith-premium-2026/sitemap.xml
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

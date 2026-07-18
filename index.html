@@ -641,6 +641,321 @@
             }
         }
     </style>
+    <style>
+        /* Sticky Call Button */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sticky-call-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: white;
+            padding: 18px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'acumin-pro', sans-serif;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: 0 8px 30px rgba(249,115,22,0.5);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse 2s infinite;
+        }
+
+        .sticky-call-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(249,115,22,0.7);
+        }
+
+        .sticky-call-btn::before {
+            content: '📞';
+            font-size: 1.5rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 8px 30px rgba(249,115,22,0.5);
+            }
+            50% {
+                box-shadow: 0 8px 40px rgba(249,115,22,0.8);
+            }
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            background: white;
+            padding: 3rem 0;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .badge-item {
+            padding: 1.5rem;
+        }
+
+        .badge-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .badge-title {
+            font-family: 'acumin-pro', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-text {
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, var(--light) 0%, white 100%);
+            padding: 5rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: var(--accent);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .author-info h4 {
+            font-family: 'acumin-pro', sans-serif;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .rating {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-call-btn {
+                padding: 14px 24px;
+                font-size: 1rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="tel:+12106193986" class="sticky-call-btn">
+            CALL NOW
+        </a>
+    </div>
+
+    <!-- Trust Badges Section -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge-item">
+                    <span class="badge-icon">🏆</span>
+                    <div class="badge-title">Licensed & Insured</div>
+                    <div class="badge-text">Texas DPS Certified Locksmiths</div>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-icon">⚡</span>
+                    <div class="badge-title">30-Min Response</div>
+                    <div class="badge-text">Fast Emergency Service 24/7</div>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-icon">💯</span>
+                    <div class="badge-title">100% Satisfaction</div>
+                    <div class="badge-text">689+ Happy Customers</div>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-icon">💰</span>
+                    <div class="badge-title">Upfront Pricing</div>
+                    <div class="badge-text">No Hidden Fees Ever</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <span class="tag" style="background: rgba(249,115,22,0.1);">CUSTOMER REVIEWS</span>
+                <h2>What San Antonio Residents Say About Us</h2>
+                <p>Real experiences from our satisfied customers across the city</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Locked out of my house at 2 AM and they arrived in 25 minutes! Professional, friendly, and got me back inside quickly. Highly recommend Elite Locksmith!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <h4>Maria Johnson</h4>
+                            <p>Stone Oak, San Antonio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Needed our office rekeyed after an employee left. They came same-day, rekeyed 15 locks in under 2 hours. Fair pricing and excellent work!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RP</div>
+                        <div class="author-info">
+                            <h4>Robert Patterson</h4>
+                            <p>Downtown San Antonio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Lost my car keys at the mall. They came to the parking lot, made me a new key with transponder programming right there. Saved me hundreds compared to the dealer!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SC</div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <p>Alamo Heights, San Antonio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Installed smart locks on all our doors. Technician was knowledgeable, explained everything, and programmed them perfectly. Love our new keyless entry system!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DM</div>
+                        <div class="author-info">
+                            <h4>David Martinez</h4>
+                            <p>The Dominion, San Antonio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "My elderly mother locked herself out. They were patient, kind, and gave her a senior discount. True professionals who care about their customers!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LT</div>
+                        <div class="author-info">
+                            <h4>Lisa Thompson</h4>
+                            <p>Leon Valley, San Antonio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Safe wouldn't open and had important documents inside. They opened it without damaging it and reset the combination. Lifesaver! Will use again."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JW</div>
+                        <div class="author-info">
+                            <h4>James Wilson</h4>
+                            <p>Helotes, San Antonio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--gray); font-size: 1.125rem; margin-bottom: 1.5rem;">
+                    Join 689+ satisfied customers in San Antonio!
+                </p>
+                <a href="tel:+12106193986" class="cta-btn" style="display: inline-block; font-size: 1.125rem; padding: 1.25rem 2.5rem;">
+                    Get Your Free Quote: (210) 619-3986
+                </a>
+            </div>
+        </div>
+    </section>
 </head>
 <body>
     <!-- Header -->
