@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Elite Locksmith San Antonio | 24/7 Emergency Service 🔐 Professional Lock Solutions</title>
-    <meta name="description" content="San Antonio's #1 rated locksmith service ⭐ 24/7 emergency response, 30-min arrival, licensed & insured. Residential, commercial & automotive lock solutions. Call (210) 619-3986">
+    <title>Elite Locksmith San Antonio | 24/7 Emergency Service - Professional Lock Solutions</title>
+    <meta name="description" content="San Antonio's #1 rated locksmith service - 24/7 emergency response, 30-min arrival, licensed & insured. Residential, commercial & automotive lock solutions. Call (210) 619-3986">
     <link rel="stylesheet" href="https://use.typekit.net/hqc3xoe.css">
     
     <style>
@@ -24,7 +24,6 @@
             --white: #ffffff;
             --gray: #64748b;
             --success: #22c55e;
-            --shadow: rgba(0, 0, 0, 0.1);
         }
 
         html {
@@ -61,33 +60,35 @@
 
         .logo {
             font-family: "acumin-pro", sans-serif;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--white);
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            letter-spacing: -0.5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent);
         }
 
         .cta-btn {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
             color: var(--white);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            padding: 1rem 2rem;
+            border-radius: 6px;
             text-decoration: none;
             font-family: "acumin-pro", sans-serif;
             font-weight: 600;
-            font-size: 1.125rem;
-            box-shadow: 0 6px 20px rgba(249,115,22,0.4);
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(249,115,22,0.3);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-block;
         }
 
         .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(249,115,22,0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249,115,22,0.5);
         }
 
         /* Hero */
@@ -106,16 +107,10 @@
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(249,115,22,0.1) 0%, transparent 70%);
             top: -250px;
             right: -250px;
             border-radius: 50%;
-            animation: pulse 8s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.15; }
-            50% { transform: scale(1.1); opacity: 0.25; }
         }
 
         .hero-content {
@@ -128,10 +123,10 @@
 
         .hero h1 {
             font-family: "acumin-pro", sans-serif;
-            font-size: clamp(2.75rem, 7vw, 5.5rem);
+            font-size: clamp(2.5rem, 7vw, 5rem);
             font-weight: 700;
             color: var(--white);
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.5rem;
             line-height: 1.1;
             letter-spacing: -1px;
         }
@@ -145,18 +140,18 @@
         }
 
         .hero p {
-            font-size: 1.5rem;
-            color: rgba(255,255,255,0.95);
+            font-size: 1.375rem;
+            color: rgba(255,255,255,0.9);
             margin-bottom: 3rem;
-            max-width: 800px;
+            max-width: 750px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
             margin-bottom: 5rem;
@@ -165,83 +160,83 @@
         .btn-primary {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
             color: var(--white);
-            padding: 1.5rem 3.5rem;
-            border-radius: 50px;
+            padding: 1.25rem 3rem;
+            border-radius: 6px;
             text-decoration: none;
             font-family: "acumin-pro", sans-serif;
             font-weight: 700;
-            font-size: 1.25rem;
-            box-shadow: 0 12px 35px rgba(249,115,22,0.4);
+            font-size: 1.125rem;
+            box-shadow: 0 8px 25px rgba(249,115,22,0.35);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 45px rgba(249,115,22,0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(249,115,22,0.5);
         }
 
         .btn-secondary {
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
             color: var(--white);
-            padding: 1.5rem 3.5rem;
+            padding: 1.25rem 3rem;
             border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 50px;
+            border-radius: 6px;
             text-decoration: none;
             font-family: "acumin-pro", sans-serif;
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.15);
             border-color: var(--accent);
         }
 
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2.5rem;
-            max-width: 1100px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .stat-box {
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(12px);
-            padding: 2.5rem 2rem;
-            border-radius: 24px;
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .stat-box:hover {
-            background: rgba(255,255,255,0.18);
-            transform: translateY(-6px);
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-4px);
         }
 
         .stat-number {
             font-family: "acumin-pro", sans-serif;
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             display: block;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            color: rgba(255,255,255,0.95);
-            font-size: 1.125rem;
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
             font-weight: 500;
         }
 
         /* Section */
         section {
-            padding: 7rem 2rem;
+            padding: 6rem 2rem;
         }
 
         .container {
@@ -251,104 +246,97 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
         }
 
         .section-title h2 {
             font-family: "acumin-pro", sans-serif;
-            font-size: clamp(2.75rem, 6vw, 4.5rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             letter-spacing: -1px;
         }
 
         .section-title p {
-            font-size: 1.375rem;
+            font-size: 1.25rem;
             color: var(--gray);
-            max-width: 750px;
+            max-width: 700px;
             margin: 0 auto;
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         .tag {
             display: inline-block;
             background: linear-gradient(135deg, rgba(249,115,22,0.1) 0%, rgba(251,191,36,0.1) 100%);
             color: var(--accent);
-            padding: 0.625rem 1.75rem;
-            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
             font-family: "acumin-pro", sans-serif;
             font-weight: 700;
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
 
         /* Services */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
             background: var(--white);
-            padding: 3.5rem;
-            border-radius: 28px;
-            box-shadow: 0 12px 45px rgba(0,0,0,0.08);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
         }
 
         .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 24px 70px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 50px rgba(0,0,0,0.12);
             border-color: var(--accent);
-        }
-
-        .service-icon {
-            font-size: 4.5rem;
-            margin-bottom: 2rem;
-            display: block;
         }
 
         .service-card h3 {
             font-family: "acumin-pro", sans-serif;
-            font-size: 2.25rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             letter-spacing: -0.5px;
         }
 
         .service-card p {
             color: var(--gray);
             margin-bottom: 2rem;
-            font-size: 1.125rem;
-            line-height: 1.9;
+            font-size: 1.0625rem;
+            line-height: 1.8;
         }
 
         .service-card ul {
             list-style: none;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         .service-card li {
-            padding: 1rem 0;
+            padding: 0.75rem 0;
             color: var(--primary);
             display: flex;
             align-items: center;
-            gap: 1.25rem;
+            gap: 1rem;
             font-weight: 500;
-            font-size: 1.0625rem;
         }
 
         .service-card li::before {
             content: '✓';
             color: var(--success);
             font-weight: 900;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             flex-shrink: 0;
         }
 
@@ -360,43 +348,37 @@
 
         .trust-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 3.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
         }
 
         .trust-item {
             text-align: center;
-            padding: 3rem;
+            padding: 2.5rem 2rem;
             background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .trust-item:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateY(-8px);
-        }
-
-        .trust-icon {
-            font-size: 4.5rem;
-            margin-bottom: 2rem;
-            display: block;
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-5px);
         }
 
         .trust-item h3 {
             font-family: "acumin-pro", sans-serif;
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             color: var(--accent);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             font-weight: 700;
         }
 
         .trust-item p {
-            color: rgba(255,255,255,0.95);
-            font-size: 1.125rem;
-            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* CTA */
@@ -408,58 +390,58 @@
 
         .cta-section h2 {
             font-family: "acumin-pro", sans-serif;
-            font-size: clamp(2.75rem, 6vw, 4.5rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             letter-spacing: -1px;
         }
 
         .cta-section p {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-            opacity: 0.98;
-            line-height: 1.8;
+            font-size: 1.375rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.7;
         }
 
         .btn-white {
             background: var(--white);
             color: var(--accent);
-            padding: 1.5rem 3.5rem;
-            border-radius: 50px;
+            padding: 1.25rem 3rem;
+            border-radius: 6px;
             text-decoration: none;
             font-family: "acumin-pro", sans-serif;
             font-weight: 800;
-            font-size: 1.25rem;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+            font-size: 1.125rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-block;
         }
 
         .btn-white:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 45px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
         }
 
         /* Footer */
         footer {
             background: var(--primary);
-            color: rgba(255,255,255,0.85);
-            padding: 5rem 2rem 2.5rem;
+            color: rgba(255,255,255,0.8);
+            padding: 4rem 2rem 2rem;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 4rem;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
         footer h3 {
             font-family: "acumin-pro", sans-serif;
             color: var(--accent);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-weight: 800;
-            font-size: 1.375rem;
+            font-size: 1.25rem;
         }
 
         footer ul {
@@ -467,11 +449,11 @@
         }
 
         footer li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         footer a {
-            color: rgba(255,255,255,0.85);
+            color: rgba(255,255,255,0.8);
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 500;
@@ -483,83 +465,83 @@
 
         .footer-bottom {
             text-align: center;
-            padding-top: 2.5rem;
-            border-top: 1px solid rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.65);
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
         }
 
         /* Mobile */
         @media (max-width: 768px) {
             nav {
-                padding: 0 1.25rem;
+                padding: 0 1rem;
             }
 
             .logo {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
 
             .cta-btn {
-                padding: 0.875rem 2rem;
-                font-size: 1.0625rem;
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9375rem;
             }
 
             .hero {
-                padding: 7rem 1.5rem 3.5rem;
+                padding: 7rem 1.5rem 3rem;
             }
 
             .hero h1 {
-                font-size: 2.75rem;
+                font-size: 2.5rem;
             }
 
             .hero p {
-                font-size: 1.25rem;
+                font-size: 1.125rem;
             }
 
             .hero-buttons {
                 flex-direction: column;
-                gap: 1.25rem;
+                gap: 1rem;
             }
 
             .btn-primary,
             .btn-secondary {
                 width: 100%;
-                padding: 1.375rem 2.5rem;
-                font-size: 1.125rem;
+                padding: 1.125rem 2rem;
+                font-size: 1rem;
                 text-align: center;
             }
 
             .stats {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+                gap: 1.5rem;
             }
 
             section {
-                padding: 5rem 1.5rem;
+                padding: 4rem 1.5rem;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
-                gap: 2.5rem;
+                gap: 2rem;
             }
 
             .service-card {
-                padding: 3rem;
+                padding: 2.5rem;
             }
 
             .trust-grid {
                 grid-template-columns: 1fr;
-                gap: 2.5rem;
+                gap: 2rem;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2.5rem;
             }
         }
 
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 2.25rem;
+                font-size: 2rem;
             }
 
             .stats {
@@ -567,7 +549,7 @@
             }
 
             .stat-number {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -576,8 +558,8 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">🔐 ELITE LOCKSMITH</a>
-            <a href="tel:+12106193986" class="cta-btn">📞 (210) 619-3986</a>
+            <a href="#" class="logo">Elite <span>Locksmith</span></a>
+            <a href="tel:+12106193986" class="cta-btn">(210) 619-3986</a>
         </nav>
     </header>
 
@@ -588,7 +570,7 @@
             <p>Professional, Fast & Reliable Lock Solutions Available 24/7/365 - Your Security is Our Priority</p>
             
             <div class="hero-buttons">
-                <a href="tel:+12106193986" class="btn-primary">📞 CALL NOW: (210) 619-3986</a>
+                <a href="tel:+12106193986" class="btn-primary">CALL NOW: (210) 619-3986</a>
                 <a href="#services" class="btn-secondary">VIEW SERVICES</a>
             </div>
 
@@ -624,8 +606,7 @@
 
             <div class="services-grid">
                 <div class="service-card">
-                    <span class="service-icon">🏠</span>
-                    <h3>Residential</h3>
+                    <h3>Residential Services</h3>
                     <p>Complete home security solutions from emergency lockouts to advanced smart lock systems</p>
                     <ul>
                         <li>Emergency Lockout Service</li>
@@ -637,8 +618,7 @@
                 </div>
 
                 <div class="service-card">
-                    <span class="service-icon">🏢</span>
-                    <h3>Commercial</h3>
+                    <h3>Commercial Services</h3>
                     <p>Advanced security systems for businesses of all sizes with 24/7 support</p>
                     <ul>
                         <li>Access Control Systems</li>
@@ -650,8 +630,7 @@
                 </div>
 
                 <div class="service-card">
-                    <span class="service-icon">🚗</span>
-                    <h3>Automotive</h3>
+                    <h3>Automotive Services</h3>
                     <p>Fast car key replacement and vehicle security services for all makes and models</p>
                     <ul>
                         <li>Car Lockout Service</li>
@@ -671,37 +650,31 @@
             <div class="section-title">
                 <span class="tag" style="background: rgba(249,115,22,0.2);">WHY CHOOSE US</span>
                 <h2 style="color: white;">Your Trusted Security Partner</h2>
-                <p style="color: rgba(255,255,255,0.95);">Experience the difference of working with San Antonio's premier locksmith service</p>
+                <p style="color: rgba(255,255,255,0.9);">Experience the difference of working with San Antonio's premier locksmith service</p>
             </div>
 
             <div class="trust-grid">
                 <div class="trust-item">
-                    <span class="trust-icon">🔒</span>
                     <h3>Licensed & Insured</h3>
                     <p>Fully licensed (#B16307) and insured for your protection</p>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">⚡</span>
                     <h3>Fast Response</h3>
                     <p>30-minute average arrival time citywide</p>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">💰</span>
                     <h3>Upfront Pricing</h3>
                     <p>No hidden fees - transparent pricing always</p>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">⭐</span>
                     <h3>Top Rated</h3>
                     <p>4.3★ rating from 689+ satisfied customers</p>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">✅</span>
                     <h3>Background Checked</h3>
                     <p>All technicians fully vetted and trained</p>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">🕐</span>
                     <h3>24/7 Available</h3>
                     <p>Emergency service anytime, day or night</p>
                 </div>
@@ -714,7 +687,7 @@
         <div class="container">
             <h2>Need Emergency Locksmith Service?</h2>
             <p>Our expert team is standing by, ready to help you 24/7</p>
-            <a href="tel:+12106193986" class="btn-white">📞 CALL NOW: (210) 619-3986</a>
+            <a href="tel:+12106193986" class="btn-white">CALL NOW: (210) 619-3986</a>
         </div>
     </section>
 
@@ -725,7 +698,7 @@
                 <div>
                     <h3>Elite Locksmith</h3>
                     <p>San Antonio's premier locksmith service since 2008. Your security is our top priority.</p>
-                    <p style="margin-top: 1.25rem;"><strong>License #B16307</strong></p>
+                    <p style="margin-top: 1rem;"><strong>License #B16307</strong></p>
                     <p><strong>Available 24/7/365</strong></p>
                 </div>
                 <div>
@@ -741,11 +714,11 @@
                 <div>
                     <h3>Contact</h3>
                     <ul>
-                        <li><a href="tel:+12106193986">📞 (210) 619-3986</a></li>
+                        <li><a href="tel:+12106193986">(210) 619-3986</a></li>
                         <li>314 E Nakoma Dr. Ste D</li>
                         <li>San Antonio, TX 78216</li>
                         <li><a href="mailto:info@elitelocksmith.com">info@elitelocksmith.com</a></li>
-                        <li style="margin-top: 1.25rem;">24/7 Emergency Service</li>
+                        <li style="margin-top: 1rem;">24/7 Emergency Service</li>
                     </ul>
                 </div>
                 <div>
